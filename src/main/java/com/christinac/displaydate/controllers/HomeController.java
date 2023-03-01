@@ -1,10 +1,13 @@
 package com.christinac.displaydate.controllers;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.Date;
 
 @Controller
 public class HomeController {
@@ -16,9 +19,12 @@ public class HomeController {
 	
 	@RequestMapping("/date") 
 		public String datePage(Model model) {
-			Date date = new Date();
+			String pattern = " E, MMM dd, yyyy";
+			DateFormat dateFormat = new SimpleDateFormat(pattern);
+			Date currentDate = Calendar.getInstance().getTime();
+			String currentDateAsString = dateFormat.format(currentDate);
 			
-			model.addAttribute("currentDate", date);
+			model.addAttribute("currentDate", currentDateAsString);
 			return "date.jsp";
 	}
 	
