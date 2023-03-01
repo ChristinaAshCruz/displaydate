@@ -6,15 +6,15 @@ pageEncoding="UTF-8"%>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Project Name here</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <!-- change to match your file/naming structure -->
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
     <!-- change to match your file/naming structure -->
   </head>
-  <body class="m-4">
+  <body class="m-4" onload="pageAlert()">
     <h1>Homepage</h1>
     <div class="my-3" id="linkBlock">
       <a class="btn btn-primary me-2" href="/date" role="button">Date</a>

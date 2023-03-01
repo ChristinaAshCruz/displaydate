@@ -30,7 +30,13 @@ public class HomeController {
 	
 	
 	@RequestMapping("/time") 
-		public String timePage() {
+		public String timePage(Model model) {
+		String pattern = "hh:mm a";
+		DateFormat dateFormat = new SimpleDateFormat(pattern);
+		Date currentTime = Calendar.getInstance().getTime();
+		String currentTimeAsString = dateFormat.format(currentTime);
+		
+		model.addAttribute("currentTime", currentTimeAsString);
 			return "time.jsp";
 		}
 

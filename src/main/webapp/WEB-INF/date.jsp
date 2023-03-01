@@ -11,10 +11,10 @@ pageEncoding="UTF-8"%>
     <link rel="stylesheet" href="/css/style.css" />
     <!-- change to match your file/naming structure -->
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
     <!-- change to match your file/naming structure -->
   </head>
-  <body class="m-4">
+  <body class="m-4" onload="pageAlert()">
     <div class="card">
       <div class="card-body">
         <c:out value="${currentDate}" />
